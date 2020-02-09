@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Currency Convert</h1>
+
+    <div class="container">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row headertop">
+                    <div class="col-sm-6 col-md-3"><h2 class="header">AMOUNT</h2></div>
+                    <div class="col-sm-6 col-md-3"><h2 class="header">FROM</h2></div>
+                    <div class="col-sm-6 col-md-3"><h2 class="header">TO</h2></div>
+                    <div class="col-sm-6 col-md-3"></div>
+            </div>
+          
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+              <div class="col-sm-6 col-md-3"><input type="text" id="input-money" class="inputbox"/></div>
+              <div class="col-sm-6 col-md-3">
+                
+                    <form action="" class="select">
+                            <input type="radio" name="currency" value="VND"> VND<br>
+                            <input type="radio" name="currency" value="USD"> USD<br>
+                            <input type="radio" name="currency" value="EUR"> EUR<br>
+                            <input type="radio" name="currency" value="AUD"> AUD<br>
+                            <input type="radio" name="currency" value="KRW"> KRW
+                    </form>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                    <select id="currencyto" class="select">
+                            <option value="VND">VND</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AUD">AUD</option>
+                            <option value="KRW">KRW</option>
+                    </select>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                    <button class="button" id="convert-button" onclick="currencyConvert()">convert</button> 
+              </div>
+            </div>
+          
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+              <div class="col-12"><div id="resultArea" class="box"> Result is HERE </div> </div>
+            </div>
+
+            <div>
+                <input type="text" id="input-coin" class="inputcoinbox"/>
+                <button class="button2" id="coin-button" onclick="coinConvert()">show me coin</button> 
+            </div>
+            <div>
+                <ul id="coinResult"></ul>
+            </div>
+          </div>
+
+
+
+    <!-- <div class="mainbox"> 
+    <div>
+        <span class="exchange">
+            <div class="amount">
+                <h2>Amount</h2>
+                <div class="backbox">
+                <input type="text" id="input-money" class="inputbox"/> 
+                </div>
+            </div>
+            <div > 
+                <h2>From</h2>
+            <div class="backbox"> 
+            <form action="" class="select">
+                <input type="radio" name="currency" value="VND"> VND<br>
+                <input type="radio" name="currency" value="USD"> USD<br>
+                <input type="radio" name="currency" value="EUR"> EUR<br>
+                <input type="radio" name="currency" value="AUD"> AUD<br>
+                <input type="radio" name="currency" value="KRW"> KRW
+            </form>
+            </div>
+            </div>
+            <div > 
+                <h2>To</h2>
+            <div class="backbox">
+            <select id="currencyto" class="select">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="KRW">KRW</option>
+            </select>
+            </div>
+            </div>
+            <div>
+                <button class="button" id="convert-button" onclick="currencyConvert()">convert</button> 
+            </div>
+        </span> 
+    </div>
+    <div class="result">
+    <div id="resultArea" class="box"> result </div> 
+    </div>
+    </div> -->
+
+    <script src="./script.js"></script>
+</body>
+</html>
